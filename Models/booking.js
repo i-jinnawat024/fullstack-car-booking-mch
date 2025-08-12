@@ -1,4 +1,5 @@
-const moment = require('moment-timezone');const mongoose = require('mongoose');
+const moment = require('moment-timezone');
+const mongoose = require('mongoose');
 
 const eventSchema = new mongoose.Schema(
   {

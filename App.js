@@ -8,7 +8,7 @@ require('dotenv').config();
 const session = require('express-session');
 const flash = require('connect-flash');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT;
 const moment = require('moment-timezone');
 const loadManuals = require('./middleware/loadManuals'); // Adjust the path to your middleware
 
@@ -38,7 +38,6 @@ app.set('view engine', 'ejs');
 //routes
 readdirSync('./Routes').map(r => app.use('/', require('./Routes/' + r)));
 
-// The connectDB function should be invoked before starting the server
 connectDB()
   .then(
     app.listen(port, () =>

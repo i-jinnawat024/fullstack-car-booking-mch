@@ -128,7 +128,7 @@
         function validateForm(event) {
             let numberID = document.getElementById("username").value;
             let showText = document.getElementById('showText')
-            let numberPattern = /^\d{8}$/;
+            let numberPattern = /^\d{5}$/;
 
             if (!numberPattern.test(numberID)) {
                 showText.innerText = "รหัสพนักงาน: กรอกตัวเลขให้ครบ 8 หลัก"
