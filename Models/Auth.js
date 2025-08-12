@@ -1,5 +1,7 @@
-const moment = require('moment-timezone');const mongoose = require('mongoose');
+const moment = require('moment-timezone');
+const mongoose = require('mongoose');
 
+console.log('jer');
 const AuthSchema = new mongoose.Schema(
   {
     username: {type: String, required: true, unique: true},

@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+console.log('here')
 const CarSchema = new mongoose.Schema(
   {
     register: {type: String, required: true, unique: true},

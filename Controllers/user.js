@@ -3,6 +3,7 @@ const Auth = require('../Models/Auth');
 const Booking = require('../Models/booking');
 exports.create = async (req, res) => {
   const {
+    username,
     firstname,
     lastname,
     numberID,
@@ -14,13 +15,13 @@ exports.create = async (req, res) => {
   } = req.body;
 
   const hashedPassword = bcrypt.hashSync(password, 10);
-
+  console.log(hashedPassword)
   try {
     await Auth.create({
       firstname,
       lastname,
       numberID,
-      username: numberID,
+      username,
       password: hashedPassword,
       organization,
       role,
